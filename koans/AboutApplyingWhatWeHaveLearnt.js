@@ -101,15 +101,15 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should count the ingredient occurrence (functional)", function () {
-    var ingredientCount = { "{ingredient name}": 0 };
 
     /* chain() together map(), flatten() and reduce() */
 
-    var ings = _(products).chain().map(function(val){return val.ingredients}).flatten(true).map((function(val){
-      ingredientCount[val] = (ingredientCount[val] || 0) + 1;
-    })).value();
-    
-    expect(ingredientCount['mushrooms']).toBe(2);
+    var ings = _(products).chain().map(function(val){return val.ingredients}).flatten(true).reduce(function(total, curr) {
+        total[curr] = (total[curr] || 0) + 1;
+        return total;
+      }, {}).value();
+
+    expect(ings['mushrooms']).toBe(2);
   });
 
   /*********************************************************************************/
