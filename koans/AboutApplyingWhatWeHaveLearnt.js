@@ -115,6 +115,7 @@ describe("About Applying What We Have Learnt", function() {
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
 
+  // helper function for problems involving prime numbers
   it("should determine if a number is prime", function(){
 
     function isPrime(n){
@@ -229,8 +230,5 @@ describe("About Applying What We Have Learnt", function() {
     expect(primeCount(10001)).toBe(104743);
 
   });
-
-  /*********************************************************************************/
-  /* END OF EXTRA CREDIT */
 
 });
