@@ -160,6 +160,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(largestPrimeFactor(10)).toBe(5);
   });
 
+  /*
   it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
     
   });
@@ -168,17 +169,29 @@ describe("About Applying What We Have Learnt", function() {
       
     
   });
+  */
 
   it("should find the difference between the sum of the squares and the square of the sums", function () {
 
     function sumSquaresDif(x, y){
       // square both nums, add the, and save the result in a variable
-
+      var num1 = (x * x) + (y * y);
       // add both nums, square the result, and save that in another variable
-
+      var num2 = Math.pow((x + y), 2);
       // return the difference between the two results
-
+      console.log(num1 - num2);
+      return num1 - num2;
     }
+
+    expect(sumSquaresDif(2,3)).toBe(-12);
+
+    expect(sumSquaresDif(4,5)).toBe(-40);
+
+    expect(sumSquaresDif(20,100)).toBe(-4000);
+
+    expect(sumSquaresDif(100,101)).toBe(-20200);
+
+    expect(sumSquaresDif(999,1000)).toBe(-1998000);
     
   });
 
