@@ -118,11 +118,20 @@ describe("About Applying What We Have Learnt", function() {
   it("should find the largest prime factor of a composite number", function () {
     
     function largestPrimeFactor(n){
+      var index = n-1;
+      var result = -1;
       // starting at n-1, loop down to 1
-      // check each number to see if is a factor of n and prime
-      // if yes, return that number
-      // if no, continue loop
-      // possible potential for recursion helper
+      // potential for recursion helper
+      while (index > 1 && result !== -1) {
+        // check each index to see if is a factor of n and prime
+        if (){
+          // if yes, set index to result, which will be returned
+          result = index;
+        }
+        // if no, reduce index by 1
+        index--;
+      }
+      return result;
     }
 
     expect(largestPrimeFactor(10)).toBe(5);
