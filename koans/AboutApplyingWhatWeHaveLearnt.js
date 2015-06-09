@@ -114,9 +114,18 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
-  /*
+
   it("should find the largest prime factor of a composite number", function () {
-  
+    
+    function largestPrimeFactor(n){
+      // starting at n-1, loop down to 1
+      // check each number to see if is a factor of n and prime
+      // if yes, return that number
+      // if no, continue loop
+      // possible potential for recursion helper
+    }
+
+    expect(largestPrimeFactor(10)).toBe(5);
   });
 
   it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
@@ -135,5 +144,5 @@ describe("About Applying What We Have Learnt", function() {
   it("should find the 10001st prime", function () {
 
   });
-  */
+
 });
