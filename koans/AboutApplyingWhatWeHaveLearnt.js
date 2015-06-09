@@ -170,6 +170,15 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the difference between the sum of the squares and the square of the sums", function () {
+
+    function sumSquaresDif(x, y){
+      // square both nums, add the, and save the result in a variable
+
+      // add both nums, square the result, and save that in another variable
+
+      // return the difference between the two results
+
+    }
     
   });
 
