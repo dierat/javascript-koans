@@ -124,7 +124,7 @@ describe("About Applying What We Have Learnt", function() {
       // potential for recursion helper
       while (index > 1 && result !== -1) {
         // check each index to see if is a factor of n and prime
-        if (){
+        if ( !(n % index) && isPrime(index) ){
           // if yes, set index to result, which will be returned
           result = index;
         }
@@ -161,7 +161,7 @@ describe("About Applying What We Have Learnt", function() {
       while (count < n) {
         // loop up through all odd numbers, starting at 3
         // if that number is prime, add to count
-        if (){count++;}
+        if (isPrime(result)){count++;}
         // add 2 to result
         result += 2;
       }
@@ -198,15 +198,15 @@ describe("About Applying What We Have Learnt", function() {
       return true;
     }
 
-    expect(isPrime(2)toBe(true));
+    expect(isPrime(2)).toBe(true);
 
-    expect(isPrime(10)toBe(false));
+    expect(isPrime(10)).toBe(false);
 
-    expect(isPrime(15)toBe(false));
+    expect(isPrime(15)).toBe(false);
 
-    expect(isPrime(17)toBe(true));
+    expect(isPrime(17)).toBe(true);
 
-    expect(isPrime(23)toBe(true));
+    expect(isPrime(23)).toBe(true);
 
   });
 
