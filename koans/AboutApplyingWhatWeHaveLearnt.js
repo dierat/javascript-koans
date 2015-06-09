@@ -115,6 +115,29 @@ describe("About Applying What We Have Learnt", function() {
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
 
+  it("should determine if a number is prime", function(){
+
+    function isPrime(n){
+      if (n === 2) {return true;}
+      if (n < 2 || !(n % 2) ) {return false;}
+      for (var i=n-1; i>1; i--){
+        if (n % i === 0) {return false;}
+      }
+      return true;
+    }
+
+    expect(isPrime(2)).toBe(true);
+
+    expect(isPrime(10)).toBe(false);
+
+    expect(isPrime(15)).toBe(false);
+
+    expect(isPrime(17)).toBe(true);
+
+    expect(isPrime(23)).toBe(true);
+
+  });
+
   it("should find the largest prime factor of a composite number", function () {
     
     function largestPrimeFactor(n){
@@ -181,33 +204,5 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
   /* END OF EXTRA CREDIT */
-
-  if("should determine if a number is prime", function(){
-
-    function isPrime(n){
-      // if n is less than 2, return false
-      // if n is divisible by 2, return false (cuts out half of all numbers larger than 2)
-      if (n < 2 || !(n % 2) ) {return false;}
-      // if n is 2, return true
-      if (n === 2) {return true;}
-      // loop from n-1 down to (not including) one and check if each number can divide into n evenly (if so, return false)
-      for (var i=n-1; n>1; n--){
-        if (n % i === 0) {return false;}
-      }
-      // if loop runs out without returning, return true
-      return true;
-    }
-
-    expect(isPrime(2)).toBe(true);
-
-    expect(isPrime(10)).toBe(false);
-
-    expect(isPrime(15)).toBe(false);
-
-    expect(isPrime(17)).toBe(true);
-
-    expect(isPrime(23)).toBe(true);
-
-  });
 
 });
