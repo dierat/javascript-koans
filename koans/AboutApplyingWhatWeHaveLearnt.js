@@ -139,13 +139,22 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the largest prime factor of a composite number", function () {
+
+    function isPrime(n){
+      if (n === 2) {return true;}
+      if (n < 2 || !(n % 2) ) {return false;}
+      for (var i=n-1; i>1; i--){
+        if (n % i === 0) {return false;}
+      }
+      return true;
+    }
     
     function largestPrimeFactor(n){
       var index = n-1;
       var result = -1;
       // starting at n-1, loop down to 1
       // potential for recursion helper
-      while (index > 1 && result !== -1) {
+      while (index > 1 && result === -1) {
         // check each index to see if is a factor of n and prime
         if ( !(n % index) && isPrime(index) ){
           // if yes, set index to result, which will be returned
@@ -179,7 +188,6 @@ describe("About Applying What We Have Learnt", function() {
       // add both nums, square the result, and save that in another variable
       var num2 = Math.pow((x + y), 2);
       // return the difference between the two results
-      console.log(num1 - num2);
       return num1 - num2;
     }
 
@@ -197,30 +205,38 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should find the 10001st prime", function () {
 
-    function primeCount(n){
-      // define variable to store count of prime numbers
-      var count = 1;
-      // define variable to hold result
-      var result = 3;
-      // while prime numbers count less than n
-      while (count < n) {
-        // loop up through all odd numbers, starting at 3
-        // if that number is prime, add to count
-        if (isPrime(result)){count++;}
-        // add 2 to result
-        result += 2;
+    function isPrime(n){
+      if (n === 2) {return true;}
+      if (n < 2 || !(n % 2) ) {return false;}
+      for (var i=n-1; i>1; i--){
+        if (n % i === 0) {return false;}
       }
+      return true;
     }
+
+    function primeCount(n){
+      if (n === 1) {return 2;}
+      if (n === 2) {return 3;}
+      var count = 2;
+      var result = 3;
+      while (count < n) {
+        result += 2;
+        if (isPrime(result)){
+          count++;
+        }
+      }
+      return result;
+    }
+
+    expect(primeCount(1)).toBe(2);
+
+    expect(primeCount(2)).toBe(3);
 
     expect(primeCount(3)).toBe(5);
 
     expect(primeCount(5)).toBe(11);
 
-    expect(primeCount(7)).toBe(17);
-
-    expect(primeCount(8)).toBe(23);
-
-    expect(primeCount(10001)).toBe('?');
+    expect(primeCount(10001)).toBe(104743);
 
   });
 
