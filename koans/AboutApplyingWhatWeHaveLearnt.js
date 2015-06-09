@@ -152,15 +152,10 @@ describe("About Applying What We Have Learnt", function() {
     function largestPrimeFactor(n){
       var index = n-1;
       var result = -1;
-      // starting at n-1, loop down to 1
-      // potential for recursion helper
       while (index > 1 && result === -1) {
-        // check each index to see if is a factor of n and prime
         if ( !(n % index) && isPrime(index) ){
-          // if yes, set index to result, which will be returned
           result = index;
         }
-        // if no, reduce index by 1
         index--;
       }
       return result;
@@ -183,12 +178,7 @@ describe("About Applying What We Have Learnt", function() {
   it("should find the difference between the sum of the squares and the square of the sums", function () {
 
     function sumSquaresDif(x, y){
-      // square both nums, add the, and save the result in a variable
-      var num1 = (x * x) + (y * y);
-      // add both nums, square the result, and save that in another variable
-      var num2 = Math.pow((x + y), 2);
-      // return the difference between the two results
-      return num1 - num2;
+      return ( (x * x) + (y * y) ) - Math.pow((x + y), 2);
     }
 
     expect(sumSquaresDif(2,3)).toBe(-12);
