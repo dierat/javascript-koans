@@ -151,11 +151,53 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the 10001st prime", function () {
-    // define variable to store count of prime numbers, start with a count of 1
-    // define variable to hold result
-    // while prime numbers count less than 10001
-    // loop up through all odd numbers, starting at 3
-    // if that number is prime, add to count
+
+    function primeCount(n){
+      // define variable to store count of prime numbers
+      var count = 1;
+      // define variable to hold result
+      var result = 3;
+      // while prime numbers count less than n
+      while (count < n) {
+        // loop up through all odd numbers, starting at 3
+        // if that number is prime, add to count
+        if (){count++;}
+        // add 2 to result
+        result += 2;
+      }
+    }
+
+    expect(primeCount(3)).toBe(5);
+
+    expect(primeCount(5)).toBe(11);
+
+    expect(primeCount(7)).toBe(17);
+
+    expect(primeCount(8)).toBe(23);
+
+    expect(primeCount(10001)).toBe('?');
+
+  });
+
+  /*********************************************************************************/
+  /* END OF EXTRA CREDIT */
+
+  if("should determine if a number is prime", function(){
+
+    function isPrime(){
+
+    }
+
+    expect(isPrime(2)toBe(true));
+
+    expect(isPrime(10)toBe(false));
+
+    expect(isPrime(15)toBe(false));
+
+    expect(isPrime(17)toBe(true));
+
+    expect(isPrime(23)toBe(true));
+
   });
 
 });
