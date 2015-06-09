@@ -151,7 +151,11 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the 10001st prime", function () {
-
+    // define variable to store count of prime numbers, start with a count of 1
+    // define variable to hold result
+    // while prime numbers count less than 10001
+    // loop up through all odd numbers, starting at 3
+    // if that number is prime, add to count
   });
 
 });
